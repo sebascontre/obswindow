@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ress" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap"
+    />
+    <style type="text/css">
+      
+:root {
+  --hsl-color: 222;
+  --window-color: hsla(var(--hsl-color), 60%, 70%, 1);
+  --border-color: hsla(var(--hsl-color), 80%, 60%, 1);
+  --shadow-color: hsla(var(--hsl-color), 40%, 50%, 1);
+  --background-color: hsl(var(--hsl-color), 50%, 95%);
+  --border-radius: 12px;
+  --border-width: 4px;
+}
+
+      /* NAVIDAD 
+      :root {
+        --hsl-color: 158;
+        --window-color: hsla(var(--hsl-color), 60%, 40%, 1);
+        --border-color: hsla(var(--hsl-color), 80%, 30%, 1);
+        --shadow-color: hsla(var(--hsl-color), 40%, 20%, 1);
+        --background-color: hsl(var(--hsl-color), 50%, 65%);
+        --border-radius: 12px;
+        --border-width: 4px;
+      } */
+
+      #taskbar {
+        display: block;
+        font-family: "Noto Sans", sans-serif;
+        height: 60px;
+        width: 1920px;
+        color: white;
+        font-weight: 700;
+        text-shadow: 0 0 1px white, 1px 1px 0px var(--border-color),
+          3px 2px 1px var(--border-color);
+      }
+      
+      #taskbar:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.6;
+    background-color: #fff;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/bg--acrylic-light.png);background-repeat: repeat;
+}
+
+      #taskbar > section {
+        height: 60px;
+        overflow: hidden;
+      }
+
+      section#software {
+        float: left;
+      }
+
+      section#software img,
+      section#headphones img {
+        float: left;
+        height: 60px;
+        padding: 10px 20px;
+        width: 80px;
+      }
+
+      section#datetime {
+        float: right;
+        padding: 6px 12px;
+      }
+
+      section#headphones {
+        background: rgba(253, 253, 150, 0.8)
+          url(https://cdn.glitch.global/241af229-dc2e-4fcd-9302-9cf4dc45409d/headphone.png?v=1657833758522)
+          4px center no-repeat;
+        color: red;
+      }
+
+      section#host {
+        background: #cceeff
+          url(https://cdn.glitch.global/241af229-dc2e-4fcd-9302-9cf4dc45409d/share.png?v=1660614983287)
+          12px center no-repeat;
+        background-size: 36px 36px !important;
+        color: red;
+      }
+
+      section#bday {
+        background: #cceecc
+          url(https://cdn.glitch.global/241af229-dc2e-4fcd-9302-9cf4dc45409d/birthday-cake.png?v=1660615074781)
+          10px center no-repeat;
+        background-size: 40px 40px !important;
+        color: red;
+      }
+
+      section.notice {
+        background-size: 52px 52px !important;
+        border-radius: 8px;
+        font-size: 18px;
+        line-height: 20px;
+        margin: 5px;
+        height: 50px !important;
+        float: right;
+        padding: 4px 12px 4px 58px;
+      }
+
+      section.notice span {
+        --border-color: darkred !important;
+        text-shadow: none;
+      }
+
+      #datetime #time {
+        text-align: center;
+        font-size: 26px;
+        line-height: 28px;
+      }
+
+      #datetime #date {
+        text-align: center;
+        font-size: 18px;
+        line-height: 20px;
+      }
+
+      #datetime #time i {
+        background: url(https://em-content.zobj.net/thumbs/120/twitter/322/flag-chile_1f1e8-1f1f1.png)
+          center right no-repeat;
+        background-size: 28px 28px;
+        display: inline-block;
+        width: 30px;
+        height: 26px;
+        position: relative;
+        top: 2px;
+        left: -2px;
+        color: transparent !important;
+        text-shadow: none;
+        overflow: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="taskbar">
+      <section id="software">
+        <img
+          src="https://cdn.glitch.global/241af229-dc2e-4fcd-9302-9cf4dc45409d/door.png?v=1657811968137"
+        />
+        <img
+          src="https://cdn.glitch.global/241af229-dc2e-4fcd-9302-9cf4dc45409d/webcam.png?v=1657811529398"
+        />
+        <img
+          src="https://cdn.glitch.global/241af229-dc2e-4fcd-9302-9cf4dc45409d/comments.png?v=1657811836228"
+        />
+        <img
+          src="https://cdn.glitch.global/241af229-dc2e-4fcd-9302-9cf4dc45409d/goal.png?v=1657811900937"
+        />
+        <img
+          src="https://cdn.glitch.global/241af229-dc2e-4fcd-9302-9cf4dc45409d/game-console.png?v=1657812186312"
+        />
+      </section>
+      <section id="datetime">
+        <p id="time">
+          <span id="hour">18</span><span id="dots">:</span
+          ><span id="mins">18</span> <i>.</i>
+        </p>
+        <p id="date">
+          <span id="day">01</span>/<span id="month">01</span>/<span id="year"
+            >0001</span
+          >
+        </p>
+      </section>
+      <section id="headphones" class="notice" >
+        <span>El streamer usa audio en stereo. <br />Se recomienda utilizar
+          audifonos.</span>
+      </section>
+      <!--<section id="host" class="notice">
+        <span>Por favor, recuerda dejar tu host. <br />Me ayuda mucho con el algoritmo.</span>
+      </section>
+      <section id="bday" class="notice">
+        <span>Stream de Cumpleaños. <br />02 de Septiembre. 18:00hrs.</span>
+      </section>-->
+    </div>
+    <script type="text/javascript">
+      setInterval(function () {
+        var today = new Date();
+        var anio = today.getFullYear();
+        var mes = today.getMonth() + 1;
+        var dia = today.getDate();
+        var horas = today.getHours();
+        var minutos = today.getMinutes();
+
+        if (mes < 10) {
+          mes = "0" + mes;
+        }
+        if (dia < 10) {
+          dia = "0" + dia;
+        }
+        if (horas < 10) {
+          horas = "0" + horas;
+        }
+        if (minutos < 10) {
+          minutos = "0" + minutos;
+        }
+
+        document.getElementById("year").innerHTML = anio;
+        document.getElementById("month").innerHTML = mes;
+        document.getElementById("day").innerHTML = dia;
+        document.getElementById("hour").innerHTML = horas;
+        document.getElementById("mins").innerHTML = minutos;
+
+        if (document.getElementById("dots").style.visibility == "visible") {
+          document.getElementById("dots").style.visibility = "hidden";
+        } else {
+          document.getElementById("dots").style.visibility = "visible";
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

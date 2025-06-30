@@ -1,0 +1,53 @@
+body {
+  background-color: rgba(0, 0, 0, 0);
+  margin: 0px auto;
+  overflow: hidden;
+}
+
+:root {
+  --hsl-color: 280;
+  --border-width: 3px;
+  --border-color: hsl(var(--hsl-color), 20%, 60%);
+  --window-color: hsl(var(--hsl-color), 40%, 20%);
+  --shadow-color: hsla(var(--hsl-color), 5%, 5%, 0.7);
+  --background-color: hsl(var(--hsl-color), 20%, 90%);
+}
+
+#root {
+  height: 60px !important;
+  width: calc(100vw - 30px) !important;
+}
+
+#root .goal_widget {
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding-right: 50px !important;
+}
+
+#root .goal_widget::after {
+  background: #f0f0f0;
+  border-color: var(--border-color);
+  border-style: solid;
+  border-width: 0px calc(var(--border-width) + 2px)
+    calc(var(--border-width) + 1px) 0px;
+  border-bottom-right-radius: 10px;
+  box-sizing: content-box;
+  box-shadow: 2px 0 0 5px var(--window-color), 3px 0 0 9px var(--border-color),
+    8px 3px 3px 10px var(--shadow-color);
+  content: "";
+  inset: 0 45px calc(100vh - 63px) -25px;
+  position: fixed;
+  transform: skewX(-15deg);
+  z-index: -1;
+}
+
+#root .goal_widget__progress_bar {
+  margin-left: -30px;
+  transform: skewX(-15deg);
+}
+
+#root .goal_widget__body {
+  font-size: 28px !important;
+  height: calc(100vh - 15px) !important;
+}

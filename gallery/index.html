@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ress" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>GALERIA FANARTS</title>
+    <style type="text/css">
+      :root {
+        --hsl-color: 330;
+      }
+
+      body {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        height: calc(100vh - 45px);
+        width: calc(100vw - 10px);
+        object-fit: contain;
+      }
+      #window {
+        background-color: white;
+        display: grid;
+        place-items: center;
+      }
+      #window::before {
+        content: "fanarts.exe";
+      }
+      span.username::before {
+        content: "— dibujo por ";
+      }
+      span.username {
+        position: absolute;
+        z-index: 11;
+        top: 0px;
+        left: 120px;
+
+        font-family: "Balsamiq Sans", cursive;
+        font-weight: bold;
+        font-size: 22px;
+
+        line-height: 35px;
+        text-indent: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="window">
+      <span class="username">text</span>
+      <img
+        src="https://i0.wp.com/f2.toyhou.se/file/f2-toyhou-se/images/20430918_lXp9SSByqnV2SOi.png?w=800"
+      />
+    </div>
+
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", () => {
+        setInterval(() => {
+          var random = Math.floor(Math.random() * images.length) + 1;
+
+          var url =
+            "https://i0.wp.com/" + images[random].replace("https://", "");
+          var name = "";
+
+          if (url.includes("@")) {
+            name = url.substring(url.indexOf("@"));
+            url = url.substring(0, url.indexOf("@"));
+          }
+
+          if (!url.includes("935")) {
+            if (url.includes("?")) url += "&w=800";
+            else url += "?w=800";
+          }
+
+          document.getElementsByTagName("img")[0].src = url;
+          document.getElementsByTagName("img")[0].onload = () => {
+            document.getElementsByTagName("span")[0].textContent = name;
+          };
+        }, 5000);
+      });
+
+      var images = [
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/20085082_mHy78YJYurjhMKu.png?h=935@xkahime",
+
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/19079723_UL8pOvGt986xF7S.png?w=800&crop=0px,0px,800px,935px@AkuoArt",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/21489597_NcRRyD8QTO5Znck.png?w=1040&crop=120px,40px,800px,935px@Torihasu_art",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/19456669_mQo81HSbDSPHlev.png?w=800&crop=0px,0px,800px,935px@projectTiGER_",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/19456688_jqUuPP1SnY5UZNY.jpg?w=800&crop=0px,70px,800px,935px@nananachtimmel",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/20115904_JXA5esyQKY1T9pA.png?h=935&crop=80px,0px,800px,935px@denaseey",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/21324179_fUPXYeHh3yVEWcH.png?w=800&crop=0px,0px,800px,935px@Kaejunni",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/21495461_4yyJ8TQmgPslhdT.jpg?w=1050&crop=110px,100px,800px,935px@refrainbow",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/20147074_Dvq1k2EOMBIqUGN.png?h=935&crop=51px,0px,800px,935px@ottermochi",
+      ];
+
+      /*
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/20568268_SU5o3EaF0O4bJKj.png?h=935@pzlock",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/20430960_CL4tX5WwC3qwWzc.jpg?h=935@SharkTuna",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/17993763_FgrbsUC5ib6O7U7.png?h=935@__smallpanda",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/19160034_KYCHcSWGCDtU0wK.png?h=935@pzlock",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/20821630_P6F5baNOynEkwN6.png?h=935@kokuuhakuu",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/19127782_nKuiNa1ocTWzGKW.png?h=935@PhantasAnanas",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/21309554_VNiRKYygsZtjukI.png?h=935@aerinyxx",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/20604208_bhaQEKWpPpu8HLe.jpg?h=935@kahimeart",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/19137959_6z4eICvTBkKnLqz.png?h=935@6nii9",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/19930568_eeD9GYbGn8c0fja.png?h=935@rubindraws",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/18800041_xZoBxhIv0A54PzB.png?h=935@tecchi_kun",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/18740428_2rWbmOW7Do7WWVM.png?h=935@gaemlau",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/20201595_SWj5I8u5zQYRo9L.png?h=935@GSquareArt",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/20466488_DkBbpztHsZnb7p4.png?h=935@ueko_t",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/18740468_LuhZzNe4lNiZCEk.png?h=935@pzlock",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/20568287_e8E2jWMMUPtw5s7.png?h=935@pzlock",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/19977409_wTpVZyC3ibUpwoN.png?h=935@pzlock",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/20962068_RF4ZjXfnwEauIMy.png?h=935@pzlock",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/19928982_FGUiQPegoPQSHug.png?h=935@Hoodienot",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/20147065_sZHZllrXUscqXGm.png?h=935@ottermochi",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/17994712_vOkOJuJlYG3tpw8.png?h=935@Betas_Inferno",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/17994702_6JRsD9inoNOvNkr.png?h=935@Betas_Inferno",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/17993724_MUHUytA1PrgCqCN.png?h=935@__smallpanda",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/20908892_oU21Zy8g7al27p7.jpg?h=935@KagamineLen",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/20854841_vVIOSdZHM8vEqFI.png?h=935@swallowseasons",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/19030403_0JzNzvNk9h8mo3B.png?h=935@potetobun",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/19176704_GvvLpfbzcZ3vT6o.png?h=935@MederTaab",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/19176575_fhKigT79DyPJ3Wh.png?h=935@Aiko188",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/18797175_SZV9FFMazQu4PQC.png?h=935@HRAK___S2",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/19930138_TPURROuZKps9yC8.jpg?h=935@SaraBerryArt",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/19133289_k9Ev2wg8BravSGj.png?h=935@6nii9",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/19928753_rqsaB4CkcUOB6wA.jpg?h=935@soda_flowt",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/20466844_B7xR60WDnlr81W4.png?h=935@YorshCP",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/20466797_yiSAtxluS8Kcf33.png?h=935@xMiyanita",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/20546076_EkplxnwfOQVBR7a.png?h=935@EVoizz",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/20466819_mGcLKRpNF7MhIsj.png?h=935@YokoYume5",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/20430952_YhxZmQg1BlDQmbB.jpg?h=935@rururuina",
+      
+
+      /*
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20466615_lTBET6sRywILFBh.png?h=935",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/19456711_GFoOPp4mSXl3mnn.jpg?h=935",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20466664_EKYfu43NPZ30HyB.png?h=935",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20466755_aXCXiMmzEJCFrS0.png?h=935",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20430721_4iItjlpym6ByORn.png?h=935",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20466403_yVFQBDWJxy0Ro7X.png?h=935",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20466437_xEQkAeUqRT5cvw4.png?h=935",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20466424_Ps3DGo1z0LkBAVd.png?h=935",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20466453_zC9kWXDbFem8wYM.png?h=935",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20539630_8T1lQ9sSP4O81OH.jpg?h=935",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20466390_adOXYEohFd8nBTu.png?h=935",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20466378_ONdYNdOuumTitXw.png?h=935",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20466352_v25wHb7tQ5H7q4U.png?h=935",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20466303_aQzjmq3ilK6U2XW.png?h=935",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20465380_FTTqlMg5oMZFa5G.png?h=935",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20465310_OM93lJyUfnjN4sh.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20465265_bRC0iq0giiPZEee.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20465241_DkViVCUblj9I82V.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20430982_7P4JDQ2dOaAUDVq.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20430970_cuZiBNGUr2P4qv3.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20430935_SGv366CzMyJAffS.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20430928_24qK2Z0LIHb1gGv.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20430918_lXp9SSByqnV2SOi.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20430900_UtG5icIYzu4gacQ.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20430888_V6bwgb5vjWSKVj4.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20430878_C30VhJ3iQmPt1bq.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20430866_DiDGDbMEU4oIrSn.jpg",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/19176586_th7egnav3MBya8S.png?1582595077",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20430840_WVqFq5iGWshXsWn.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20430827_72OT3wDv2AP1nEV.png?1583900181",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20430818_t8gvEkl4TPHSfP6.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20430855_mxuX3bKsdKryAz9.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/53409727_Ir0rH0n1LqJ4Gp6.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20430807_74axwXbZOA8TqbA.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20430793_o6DFZ2JNUM8W4xw.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20430779_pKXJnP38yIhfwgu.jpg",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20430765_oGvfCw3OzsmHbP6.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20430735_3SeQ42gR6yDam36.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20430702_NbrEWpc1AfBDwlJ.gif",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20430662_GEvnRdHgUMT6Uy2.png?1583493412",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20430672_t9EYPEAaW28LxEt.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20182986_RvRw4gHifGvdRM7.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20201575_T5UsuLTOavgfUbs.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20182855_5dfrclb9daAL8OQ.jpg",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20201463_WnHCgHgSDZKfnxo.jpg",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20542320_uU7n0GQe6JxhDyT.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20201432_JuOh1mutfozaBhL.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20182820_GWumvMg4EUbJVor.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20182785_DCnKkembXxiks92.jpg",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20182760_vtmXE7SXKY2ie2c.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20201538_4mAPPg0MLEUIoGl.jpg",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20201477_Lson7zahhnbByYi.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20182719_ifW3H0deEuPv2wl.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20182670_VAnVnvxrCIy1jBI.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20182645_SbBhZ5DYqANSPHS.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20182615_dw4xtl7skjVzsGw.png?1582595420",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20182585_AUKQvDtnNmRuBTR.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20182549_0FIA5kj41DRn7cd.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20180755_RkOrc1InFzwRACW.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20180732_pNyOtw2Bhtj8GJL.jpg",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20147300_ynMrstTb8yvhZ1M.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20147001_O3U41D1uwRabY3P.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20146526_jMcwA7svphL43Xz.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20080861_SYgFaWPKLvM9SBM.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/19930209_XcdOWtNTHkPHXbg.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/19930319_p172QCfkQiXvfwq.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/19930287_fT1zwBpaPVkUnpp.jpg",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/19930024_yNVNr04mHh3v9M6.jpg?1582594693",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/19929947_zWu2nyIQZ5sbqYi.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20466501_RY96P8pqpA81KNY.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/19929890_YtYttMayQfiRIVy.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20466644_sqleio5YSXzZi7b.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/19929051_GfTywiJhX355cQV.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/19928821_cScQFgnvgKJqGKr.png?1582594982",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/19859864_f70wdQffLoVatYE.png?1582594835",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/19176598_1mErlroW2yajomD.png?1582594640",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/19176745_MEftV6SeDCFdwdA.png?1582595034",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/19176735_Wco0SYBk3pexsZn.png?1580054869",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/19176605_ubn5WeFnuYY4hFC.png?1580054869",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/19176565_3HpIw9oMrf7RQef.png?1582595010",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/19176562_XVyTRSjOKdW6426.png?1582595067",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20911956_VnLz5A7qX84btzc.jpg?1586354577",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/19030315_rwXgHLGv25ehvLB.png?1580054752",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20182700_8TJvNEAVod3MdyB.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/18797210_T0PoLXikcuvjBGG.png?1580054511",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20430752_Wevv27ssGJSdf2F.jpg",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20430728_33id8jro886sMDG.jpg?1583493385",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20430725_SEZ9Si15SKFE9ar.jpg?1583493360",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/19269921_GSAKAL6Dw14vnMX.png?1580055025",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20083020_Pp3wVqo34EWUBXB.jpg",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20083000_1E3TkD8y7UrKBUo.jpg",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20081477_qbVXOYdY0YY9ixy.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20465329_AKV02p68oulYyiJ.png",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20466889_jVV4CHOmlVnX1DX.jpg",
+      "https://f2.toyhou.se/file/f2-toyhou-se/images/20104922_xdx49IDWlZuBhzT.png"
+*/
+    </script>
+  </body>
+</html>

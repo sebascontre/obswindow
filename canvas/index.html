@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=1920, user-scalable=no"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="OBS CANVAS" />
+    <link rel="apple-touch-icon" href="icono.png" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ress" />
+    <script src="https://unpkg.com/obs-websocket-js@5.0.3/dist/obs-ws.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reinvented-color-wheel@0.4.0/webcomponents/index.js"></script>
+    <style type="text/css">
+      * { touch-action: none; }
+
+      #preview,
+      #canvas {
+        width: 1920px;
+        height: 1080px;
+      }
+
+      #preview,
+      #canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      #preview {
+        opacity: 0.5;
+      }
+
+      .obs #preview {
+        display: none;
+        opacity: 1;
+      }
+
+      .obs buttonm .obs label,
+      .obs input {
+        display: none;
+      }
+      body {
+        padding-top: calc(100vw * 9 / 16);
+      }
+
+      #recentColors {
+        gap: 5px;
+        margin-top: 10px;
+      }
+
+      #recentColors span {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      #tools {
+        height: calc(100vh - (100vw * 9 / 16));
+        padding: 12px;
+        width: 100vw;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      id="preview"
+      src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+    />
+    <canvas id="canvas" width="1920" height="1080"></canvas>
+
+    <div id="tools">
+      <reinvented-color-wheel
+        id="colorPicker"
+        hex="#ff3e00"
+        wheel-diameter="140"
+        wheel-thickness="20"
+        handle-diameter="20"
+        wheel-reflects-saturation="true"
+      ></reinvented-color-wheel>
+    </div>
+
+    <script src="/canvas/script.js"></script>
+  </body>
+</html>
