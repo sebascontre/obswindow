@@ -91,7 +91,7 @@ body:before {
 #window.switch {
   --hsl-color: 20;
 } #window.switch::before {
-  content: "switch.exe";
+  content: "switch2.exe";
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAR5JREFUSEvNlTFOw0AQRd9vEDVwD1IgUSC4QGhyj6SJaGiQ6GjSwEUiAblAUpEmuQc5QNIM3siLTLTOZuO1hEvP7DzPzvd80fIjX9/M7oEn4BI4CXBXki7cezNbAWeBnA2wBJ4lfbr4FlAWf481I8nnWyy3APUkjf2BOXAVO5QI+JJ07QHrmmv5w0wErCWdhlp+BV7Kyo/AwFMSAbj8XcBU0l1l8C4+BW62A0ubQRAwkvRQvRczGwHDXICZpNs2O3C133Zm0M85g71KzTGDYwB7VZfyZ4ZUFFVdU0BUdU0BUdU1BURVlwNQK4zQqjhGRf8D0Pq6bt1wuoWjfWR2tK6kSdX0HcSZfucA0/8uluJ5jekvStOf/Jp+7MubxH8AhoDkGewtUrkAAAAASUVORK5CYII=);
   background-position-y: 8px;
 }
